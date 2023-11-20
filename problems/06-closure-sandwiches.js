@@ -19,11 +19,9 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 function sandwichMaker() {
   let build = "One sandwich with tomato";
-  return function sandwich(ingredient) {
-    build += " and " + ingredient;
-    return build;
-  }
+  return (ingredient) => build += " and " + ingredient;
 }
+
 let sandwich = sandwichMaker(); // => returns a function
 console.log(sandwich("spinach")) // => "One sandwich with tomato and spinach"
 console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach and jelly"
