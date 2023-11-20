@@ -4,10 +4,10 @@ for a rectangle (height * width * length). In order to enter the
 required measurements we'll need to measure them one at a time.
 
 Write a function named `recVolume(height)`. The recVolume function will be passed
-a height int and will return a function. The function returned by recVolume can 
+a height int and will return a function. The function returned by recVolume can
 then be invoked two more times with a single argument number each time (one for
 length and one for width). Once all three numbers (height, width, length) have
-been collected return the volume of the rectangle. Any subsequent calls to the 
+been collected return the volume of the rectangle. Any subsequent calls to the
 function returned by recVolume should continue to return the original volume.
 
 Example 1:
@@ -24,7 +24,27 @@ console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
 function recVolume(height) {
-  // Your code here
+  let hgt = height;
+  let len;
+  let wid;
+  let count = 0;
+
+  return (passed) => {
+    count += 1;
+    if (count === 1) {
+      len = passed;
+    } else if (count === 2) {
+      wid = passed;
+      return hgt * len * wid;
+    } else {
+      return hgt * len * wid;
+    }
+
+  }
+  // return (length) => {
+  //   let len = length;
+  //   return (width) => {return (hgt * len * width)};
+  // }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
