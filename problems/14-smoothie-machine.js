@@ -28,8 +28,8 @@ const smoothieMachine = (...ingredients) => {
   //ingredients.forEach(val => build += " and " + val);
   let ing = [...ingredients];
   return (...newStuff) => {
-    newStuff.forEach(val => ingredients.push(val));
-    build = "I'm having smoothie with " + ingredients.join(' and ');
+    newStuff.forEach(val => ing.push(val));
+    build = "I'm having a smoothie with " + ing.join(' and ');
     return build;
   }
 

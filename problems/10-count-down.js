@@ -32,7 +32,7 @@ function countDownTimer(num) {
   if (count > 0) {
     return function() {
       count -= 1;
-      console.log(count);
+      //console.log(count);
       if (count === 0) {
         return "Happy New Year!";}
       // } else {
